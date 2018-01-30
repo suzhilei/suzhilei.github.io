@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小胖子</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-01-28T15:44:40.627Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>小胖子</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的第一篇文章</title>
+    <link href="http://yoursite.com/2018/01/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <id>http://yoursite.com/2018/01/27/我的第一篇文章/</id>
+    <published>2018-01-27T13:54:47.000Z</published>
+    <updated>2018-01-28T15:44:40.627Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="王立军"><a href="#王立军" class="headerlink" title="王立军"></a>王立军</h2><hr><p>安卓开发工程师<br><a id="more"></a><br><a href="http://www.jianshu.com" target="_blank" rel="noopener">http://www.jianshu.com</a><br>wanglijundasdasd</p><pre><code>public class Solution {    public ArrayList&lt;Integer&gt; PrintFromTopToBottom(TreeNode root) {        ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();        if(root == null ){            return list;        }        Queue&lt;TreeNode&gt; queue  = new LinkedList&lt;TreeNode&gt;();        queue.add(root);        list.add(root.val);        while(!queue.isEmpty()){            TreeNode node = queue.poll();            if(node.left != null){                queue.add(node.left);                list.add(node.left.val);            }            if(node.right != null){                queue.add(node.right);                list.add(node.right.val);            }        }        return list;    }}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;王立军&quot;&gt;&lt;a href=&quot;#王立军&quot; class=&quot;headerlink&quot; title=&quot;王立军&quot;&gt;&lt;/a&gt;王立军&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;安卓开发工程师&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
