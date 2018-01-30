@@ -42,17 +42,16 @@
     <link href="http://yoursite.com/2018/01/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
     <id>http://yoursite.com/2018/01/27/我的第一篇文章/</id>
     <published>2018-01-27T13:54:47.000Z</published>
-    <updated>2018-01-30T18:11:20.770Z</updated>
+    <updated>2018-01-30T18:30:51.473Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>##生成xml的步骤</p><h3 id="1-获取XmlSerializer实例："><a href="#1-获取XmlSerializer实例：" class="headerlink" title="1.获取XmlSerializer实例："></a>1.获取XmlSerializer实例：</h3><pre><code>XmlSerializer serializer = Xml.newSerializer();</code></pre><h3 id="2-设置XmlSerializer序列化参数"><a href="#2-设置XmlSerializer序列化参数" class="headerlink" title="2.设置XmlSerializer序列化参数"></a>2.设置XmlSerializer序列化参数</h3><pre><code>File file = new File(Environment.getExternalStorageDirectory(), &quot;index.txt&quot;);FileOutputStream fos = new FileOutputStream(file);</code></pre><h3 id="3-写xml文档的开头"><a href="#3-写xml文档的开头" class="headerlink" title="3.写xml文档的开头"></a>3.写xml文档的开头</h3><pre><code>serializer.startDocument(&quot;utf-8&quot;, true);</code></pre><h3 id="4-写xml的节点"><a href="#4-写xml的节点" class="headerlink" title="4.写xml的节点"></a>4.写xml的节点</h3><pre><code>serializer.startTag(null, &quot;smss&quot;);     //节点的开始serializer.text(&quot;这里写内容&quot;);         //节点的内容serializer.endTag(null, &quot;smss&quot;);    //节点的结束.......可以写很多个节点</code></pre><h3 id="5-写xml文档的结束"><a href="#5-写xml文档的结束" class="headerlink" title="5.写xml文档的结束"></a>5.写xml文档的结束</h3><pre><code>serializer.endDocument()</code></pre>]]></content>
+    <content type="html"><![CDATA[<hr><h2 id="一、生成xml的步骤"><a href="#一、生成xml的步骤" class="headerlink" title="一、生成xml的步骤:"></a>一、生成xml的步骤:</h2><h3 id="1-获取XmlSerializer实例："><a href="#1-获取XmlSerializer实例：" class="headerlink" title="1.获取XmlSerializer实例："></a>1.获取XmlSerializer实例：</h3><pre><code>XmlSerializer serializer = Xml.newSerializer();</code></pre><h3 id="2-设置XmlSerializer序列化参数"><a href="#2-设置XmlSerializer序列化参数" class="headerlink" title="2.设置XmlSerializer序列化参数"></a>2.设置XmlSerializer序列化参数</h3><pre><code>File file = new File(Environment.getExternalStorageDirectory(), &quot;index.txt&quot;);FileOutputStream fos = new FileOutputStream(file);</code></pre><h3 id="3-写xml文档的开头"><a href="#3-写xml文档的开头" class="headerlink" title="3.写xml文档的开头"></a>3.写xml文档的开头</h3><pre><code>serializer.startDocument(&quot;utf-8&quot;, true);</code></pre><h3 id="4-写xml的节点"><a href="#4-写xml的节点" class="headerlink" title="4.写xml的节点"></a>4.写xml的节点</h3><pre><code>serializer.startTag(null, &quot;smss&quot;);     //节点的开始serializer.text(&quot;这里写内容&quot;);         //节点的内容serializer.endTag(null, &quot;smss&quot;);    //节点的结束.......可以写很多个节点</code></pre><h3 id="5-写xml文档的结束"><a href="#5-写xml文档的结束" class="headerlink" title="5.写xml文档的结束"></a>5.写xml文档的结束</h3><pre><code>serializer.endDocument()</code></pre>]]></content>
     
     <summary type="html">
     
       
       
         &lt;hr&gt;
-&lt;p&gt;##生成xml的步骤&lt;/p&gt;
-&lt;h3 id=&quot;1-获取XmlSerializer实例：&quot;&gt;&lt;a href=&quot;#1-获取XmlSerializer实例：&quot; class=&quot;headerlink&quot; title=&quot;1.获取XmlSerializer实例：&quot;&gt;&lt;/a&gt;1.获
+&lt;h2 id=&quot;一、生成xml的步骤&quot;&gt;&lt;a href=&quot;#一、生成xml的步骤&quot; class=&quot;headerlink&quot; title=&quot;一、生成xml的步骤:&quot;&gt;&lt;/a&gt;一、生成xml的步骤:&lt;/h2&gt;&lt;h3 id=&quot;1-获取XmlSerializer实例：&quot;&gt;&lt;a h
       
     
     </summary>
