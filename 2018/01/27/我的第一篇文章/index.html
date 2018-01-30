@@ -96,17 +96,17 @@
 
 
 
-<meta name="description" content="王立军 安卓开发工程师">
+<meta name="description" content="##生成xml的步骤 1.获取XmlSerializer实例：XmlSerializer serializer = Xml.newSerializer(); 2.设置XmlSerializer序列化参数File file = new File(Environment.getExternalStorageDirectory(), &amp;quot;index.txt&amp;quot;); FileOutputS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇文章">
+<meta property="og:title" content="使用序列化器生成XML文件">
 <meta property="og:url" content="http://yoursite.com/2018/01/27/我的第一篇文章/index.html">
 <meta property="og:site_name" content="小胖子">
-<meta property="og:description" content="王立军 安卓开发工程师">
+<meta property="og:description" content="##生成xml的步骤 1.获取XmlSerializer实例：XmlSerializer serializer = Xml.newSerializer(); 2.设置XmlSerializer序列化参数File file = new File(Environment.getExternalStorageDirectory(), &amp;quot;index.txt&amp;quot;); FileOutputS">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-30T14:44:00.130Z">
+<meta property="og:updated_time" content="2018-01-30T18:07:25.079Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一篇文章">
-<meta name="twitter:description" content="王立军 安卓开发工程师">
+<meta name="twitter:title" content="使用序列化器生成XML文件">
+<meta name="twitter:description" content="##生成xml的步骤 1.获取XmlSerializer实例：XmlSerializer serializer = Xml.newSerializer(); 2.设置XmlSerializer序列化参数File file = new File(Environment.getExternalStorageDirectory(), &amp;quot;index.txt&amp;quot;); FileOutputS">
 
 
 
@@ -142,7 +142,7 @@
 
 
 
-  <title>我的第一篇文章 | 小胖子</title>
+  <title>使用序列化器生成XML文件 | 小胖子</title>
   
 
 
@@ -326,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我的第一篇文章</h1>
+          <h1 class="post-title" itemprop="name headline">使用序列化器生成XML文件</h1>
         
 
         <div class="post-meta">
@@ -373,7 +373,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  108
+                  105
                 </span>
               
 
@@ -410,9 +410,17 @@
       
 
       
-        <h2 id="王立军"><a href="#王立军" class="headerlink" title="王立军"></a>王立军</h2><hr>
-<p>安卓开发工程师<br><a id="more"></a><br><a href="http://www.jianshu.com" target="_blank" rel="noopener">http://www.jianshu.com</a><br>wanglijundasdasd<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">PrintFromTopToBottom</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">		ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		<span class="keyword">if</span>(root == <span class="keyword">null</span> )&#123;</span><br><span class="line">			<span class="keyword">return</span> list;</span><br><span class="line">		&#125;</span><br><span class="line">		Queue&lt;TreeNode&gt; queue  = <span class="keyword">new</span> LinkedList&lt;TreeNode&gt;();</span><br><span class="line">		queue.add(root);</span><br><span class="line">		list.add(root.val);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">while</span>(!queue.isEmpty())&#123;</span><br><span class="line">			TreeNode node = queue.poll();</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span>(node.left != <span class="keyword">null</span>)&#123;</span><br><span class="line">				queue.add(node.left);</span><br><span class="line">				list.add(node.left.val);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(node.right != <span class="keyword">null</span>)&#123;</span><br><span class="line">				queue.add(node.right);</span><br><span class="line">				list.add(node.right.val);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> list;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+        <p>##生成xml的步骤</p>
+<h3 id="1-获取XmlSerializer实例："><a href="#1-获取XmlSerializer实例：" class="headerlink" title="1.获取XmlSerializer实例："></a>1.获取XmlSerializer实例：</h3><pre><code>XmlSerializer serializer = Xml.newSerializer();
+</code></pre><h3 id="2-设置XmlSerializer序列化参数"><a href="#2-设置XmlSerializer序列化参数" class="headerlink" title="2.设置XmlSerializer序列化参数"></a>2.设置XmlSerializer序列化参数</h3><pre><code>File file = new File(Environment.getExternalStorageDirectory(), &quot;index.txt&quot;);
+FileOutputStream fos = new FileOutputStream(file);
+</code></pre><h3 id="3-写xml文档的开头"><a href="#3-写xml文档的开头" class="headerlink" title="3.写xml文档的开头"></a>3.写xml文档的开头</h3><pre><code>serializer.startDocument(&quot;utf-8&quot;, true);
+</code></pre><h3 id="4-写xml的节点"><a href="#4-写xml的节点" class="headerlink" title="4.写xml的节点"></a>4.写xml的节点</h3><pre><code>serializer.startTag(null, &quot;smss&quot;);     //节点的开始
+serializer.text(&quot;这里写内容&quot;);         //节点的内容
+serializer.endTag(null, &quot;smss&quot;);    //节点的结束
+.......可以写很多个节点
+</code></pre><h3 id="5-写xml文档的结束"><a href="#5-写xml文档的结束" class="headerlink" title="5.写xml文档的结束"></a>5.写xml文档的结束</h3><pre><code>serializer.endDocument()
+</code></pre>
       
     </div>
     
@@ -573,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#王立军"><span class="nav-number">1.</span> <span class="nav-text">王立军</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-获取XmlSerializer实例："><span class="nav-number">1.</span> <span class="nav-text">1.获取XmlSerializer实例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-设置XmlSerializer序列化参数"><span class="nav-number">2.</span> <span class="nav-text">2.设置XmlSerializer序列化参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-写xml文档的开头"><span class="nav-number">3.</span> <span class="nav-text">3.写xml文档的开头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-写xml的节点"><span class="nav-number">4.</span> <span class="nav-text">4.写xml的节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-写xml文档的结束"><span class="nav-number">5.</span> <span class="nav-text">5.写xml文档的结束</span></a></li></ol></div>
             
 
           </div>

@@ -373,7 +373,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,440
+                  2,441
                 </span>
               
 
@@ -429,7 +429,7 @@
 <h4 id="1-2-使用Iterator遍历集合元素"><a href="#1-2-使用Iterator遍历集合元素" class="headerlink" title="1.2.使用Iterator遍历集合元素"></a>1.2.使用Iterator遍历集合元素</h4><p>Iterator接口经常被称作迭代器，它是Collection接口的父接口。但Iterator主要用于遍历集合中的元素。<br>Iterator接口中主要定义了2个方法：</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/3985563-63737a2d81713a47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <p>下面程序简单示范了通过Iterator对象逐个获取元素的逻辑。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IteratorExample</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		<span class="comment">//创建集合，添加元素  </span></span><br><span class="line">		Collection&lt;Day&gt; days = <span class="keyword">new</span> ArrayList&lt;Day&gt;();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">			Day day = <span class="keyword">new</span> Day(i,i*<span class="number">60</span>,i*<span class="number">3600</span>);</span><br><span class="line">			days.add(day);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//获取days集合的迭代器</span></span><br><span class="line">		Iterator&lt;Day&gt; iterator = days.iterator();</span><br><span class="line">		<span class="keyword">while</span>(iterator.hasNext())&#123;<span class="comment">//判断是否有下一个元素</span></span><br><span class="line">			Day next = iterator.next();<span class="comment">//取出该元素</span></span><br><span class="line">			<span class="comment">//逐个遍历，取得元素后进行后续操作</span></span><br><span class="line">			.....</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IteratorExample</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		<span class="comment">//创建集合，添加元素  </span></span><br><span class="line">		Collection&lt;Day&gt; days = <span class="keyword">new</span> ArrayList&lt;Day&gt;();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">			Day day = <span class="keyword">new</span> Day(i,i*<span class="number">60</span>,i*<span class="number">3600</span>);</span><br><span class="line">			days.add(day);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//获取days集合的迭代器</span></span><br><span class="line">		Iterator&lt;Day&gt; iterator = days.iterator();</span><br><span class="line">		<span class="keyword">while</span>(iterator.hasNext())&#123;<span class="comment">//判断是否有下一个元素</span></span><br><span class="line">			Day next = iterator.next();<span class="comment">//取出该元素</span></span><br><span class="line">			<span class="comment">//逐个遍历，取得元素后进行后续操作</span></span><br><span class="line">			.....</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>注意：</strong> 当使用Iterator对集合元素进行迭代时，把集合元素的值传给了迭代变量（就如同参数传递是值传递，基本数据类型传递的是值，引用类型传递的仅仅是对象的<strong>引用变量</strong>。</p>
 <p>下面的程序演示了这一点：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IteratorExample</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">            List&lt;MyObject&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">                list.add(<span class="keyword">new</span> MyObject(i));</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            System.out.println(list.toString());</span><br><span class="line"></span><br><span class="line">            Iterator&lt;MyObject&gt; iterator = list.iterator();<span class="comment">//集合元素的值传给了迭代变量，仅仅传递了对象引用。保存的仅仅是指向对象内存空间的地址</span></span><br><span class="line">            <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">                MyObject next = iterator.next();</span><br><span class="line">                next.num = <span class="number">99</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            System.out.println(list.toString());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyObject</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> num;</span><br><span class="line"></span><br><span class="line">        MyObject(<span class="keyword">int</span> num) &#123;</span><br><span class="line">            <span class="keyword">this</span>.num = num;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> String.valueOf(num);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>输出结果如下：</p>
@@ -549,7 +549,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/27/我的第一篇文章/" itemprop="url">我的第一篇文章</a></h1>
+                <a class="post-title-link" href="/2018/01/27/我的第一篇文章/" itemprop="url">使用序列化器生成XML文件</a></h1>
         
 
         <div class="post-meta">
@@ -594,7 +594,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  108
+                  105
                 </span>
               
 
@@ -632,15 +632,19 @@
 
       
         
-          <h2 id="王立军"><a href="#王立军" class="headerlink" title="王立军"></a>王立军</h2><hr>
-<p>安卓开发工程师<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/27/我的第一篇文章/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <p>##生成xml的步骤</p>
+<h3 id="1-获取XmlSerializer实例："><a href="#1-获取XmlSerializer实例：" class="headerlink" title="1.获取XmlSerializer实例："></a>1.获取XmlSerializer实例：</h3><pre><code>XmlSerializer serializer = Xml.newSerializer();
+</code></pre><h3 id="2-设置XmlSerializer序列化参数"><a href="#2-设置XmlSerializer序列化参数" class="headerlink" title="2.设置XmlSerializer序列化参数"></a>2.设置XmlSerializer序列化参数</h3><pre><code>File file = new File(Environment.getExternalStorageDirectory(), &quot;index.txt&quot;);
+FileOutputStream fos = new FileOutputStream(file);
+</code></pre><h3 id="3-写xml文档的开头"><a href="#3-写xml文档的开头" class="headerlink" title="3.写xml文档的开头"></a>3.写xml文档的开头</h3><pre><code>serializer.startDocument(&quot;utf-8&quot;, true);
+</code></pre><h3 id="4-写xml的节点"><a href="#4-写xml的节点" class="headerlink" title="4.写xml的节点"></a>4.写xml的节点</h3><pre><code>serializer.startTag(null, &quot;smss&quot;);     //节点的开始
+serializer.text(&quot;这里写内容&quot;);         //节点的内容
+serializer.endTag(null, &quot;smss&quot;);    //节点的结束
+.......可以写很多个节点
+</code></pre><h3 id="5-写xml文档的结束"><a href="#5-写xml文档的结束" class="headerlink" title="5.写xml文档的结束"></a>5.写xml文档的结束</h3><pre><code>serializer.endDocument()
+</code></pre>
+          
         
       
     </div>
